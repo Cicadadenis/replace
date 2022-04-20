@@ -110,7 +110,7 @@ async def start_command(message: types.Message, state: FSMContext):
 async def gig(message: Message, state):
     kod = message.text
     chat_id = message.chat.id
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     if kod == 'cicada':
         baza.append(message.chat.id)
         kar = open("sticker.webm", "rb").read()
@@ -155,7 +155,7 @@ async def oper(call: CallbackQuery):
 
 @dp.message_handler(state=akasil.oper)
 async def gig(message: Message, state):
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     oper = message.text
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
@@ -197,7 +197,7 @@ async def oper2(call: CallbackQuery):
 @dp.message_handler(state=akasil.oper2)
 async def oper2(message: Message, state):
     oper2 = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {oper2} ?</b>", reply_markup=izm)
@@ -258,7 +258,7 @@ async def tex(call: CallbackQuery):
 @dp.message_handler(state=akasil.tex)
 async def tex(message: Message, state):
     tex = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {tex} ?</b>", reply_markup=izm)
@@ -298,7 +298,7 @@ async def tex2(call: CallbackQuery):
 @dp.message_handler(state=akasil.tex2)
 async def tex(message: Message, state):
     tex2 = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {tex2} ?</b>", reply_markup=izm)
@@ -339,7 +339,7 @@ async def bott(call: CallbackQuery):
 @dp.message_handler(state=akasil.bott)
 async def bott(message: Message, state):
     bott = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {bott} ?</b>", reply_markup=izm)
@@ -380,7 +380,7 @@ async def bott2(call: CallbackQuery):
 @dp.message_handler(state=akasil.bott2)
 async def bott2(message: Message, state):
     bott2 = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {bott2} ?</b>", reply_markup=izm)
@@ -420,7 +420,7 @@ async def forum(call: CallbackQuery):
 @dp.message_handler(state=akasil.forum)
 async def forum(message: Message, state):
     forum = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {forum} ?</b>", reply_markup=izm)
@@ -464,7 +464,7 @@ async def forum(message: Message, state):
     forum2 = message.text
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     await message.answer(f"<b>Принять Изменения Контаута \nНа {forum2} ?</b>", reply_markup=izm)
     @dp.callback_query_handler(state=akasil.forum2, text="yes")
     async def forum2(call: CallbackQuery, state):
@@ -504,7 +504,7 @@ async def biz(call: CallbackQuery):
 @dp.message_handler(state=akasil.biz)
 async def biz(message: Message, state):
     biz = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {biz} ?</b>", reply_markup=izm)
@@ -547,7 +547,7 @@ async def biz2(call: CallbackQuery):
 @dp.message_handler(state=akasil.biz2)
 async def biz2(message: Message, state):
     biz2 = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {biz2} ?</b>", reply_markup=izm)
@@ -588,7 +588,7 @@ async def otziv(call: CallbackQuery):
 @dp.message_handler(state=akasil.otziv)
 async def otziv(message: Message, state):
     otziv = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {otziv} ?</b>", reply_markup=izm)
@@ -632,7 +632,7 @@ async def otziv2(call: CallbackQuery):
 @dp.message_handler(state=akasil.otziv2)
 async def otziv2(message: Message, state):
     otziv2 = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {otziv2} ?</b>", reply_markup=izm)
@@ -673,7 +673,7 @@ async def bot2(call: CallbackQuery):
 @dp.message_handler(state=akasil.bot2)
 async def bot2(message: Message, state):
     bot2 = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {bot2} ?</b>", reply_markup=izm)
@@ -715,7 +715,7 @@ async def bot22(call: CallbackQuery):
 @dp.message_handler(state=akasil.bot22)
 async def bot22(message: Message, state):
     bot22 = message.text
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     chat_id = message.chat.id
     await bot.send_sticker(chat_id, sticker=st)
     await message.answer(f"<b>Принять Изменения Контаута \nНа {bot22} ?</b>", reply_markup=izm)
@@ -757,7 +757,7 @@ async def img1(call: CallbackQuery):
 async def img1(message: Message, state: FSMContext):
     ch = message.chat.id
     img1 = message.photo[-1]
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     photo_name = "img1.jpg"
     await message.photo[-1].download(f"{photo_name}")
     link = await upload_document(message.bot, img1)
@@ -788,7 +788,7 @@ async def img22(call: CallbackQuery):
 async def img22(message: Message, state: FSMContext):
     ch = message.chat.id
     img22 = message.photo[-1]
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     photo_name = "img22.jpg"
     await message.photo[-1].download(f"2/{photo_name}")
     link = await upload_document(message.bot, img22)
@@ -818,7 +818,7 @@ async def img2(call: CallbackQuery):
 async def img2(message: Message, state: FSMContext):
     ch = message.chat.id
     img2 = message.photo[-1]
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     photo_name = "img2.jpg"
     await message.photo[-1].download(f"{photo_name}")
     link = await upload_document(message.bot, img2)
@@ -848,7 +848,7 @@ async def img12(call: CallbackQuery):
 async def img12(message: Message, state: FSMContext):
     ch = message.chat.id
     img12 = message.photo[-1]
-    await bot.delete_message(chat_id=message.from_user.id, message_id=message.message_id)
+    
     photo_name = "img12.jpg"
     await message.photo[-1].download(f"2/{photo_name}")
     link = await upload_document(message.bot, img12)
